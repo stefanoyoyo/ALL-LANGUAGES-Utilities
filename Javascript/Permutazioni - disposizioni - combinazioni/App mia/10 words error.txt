@@ -1,0 +1,45 @@
+Microsoft Windows [Versione 10.0.18363.1316]
+(c) 2019 Microsoft Corporation. Tutti i diritti sono riservati.
+
+C:\Users\ament\Documents\_2__Informatica\_3__ALL LANGUAGES - Utilities\ALL-LANGUAGES-Utilities\Javascript\Permutazioni - disposizioni - combinazioni\App mia>node calc
+num: D(5,3) [con ripetizioni] = 125
+
+<--- Last few GCs --->
+
+[23948:000001E315E35080]   900062 ms: Scavenge 1719.2 (1721.4) -> 1719.3 (1724.4) MB, 182.4 / 0.0 ms  (average mu = 0.999, current mu = 1.000) allocation failure
+[23948:000001E315E35080]   902118 ms: Scavenge 1720.2 (1724.4) -> 1720.2 (1723.4) MB, 147.7 / 0.0 ms  (average mu = 0.999, current mu = 1.000) allocation failure
+[23948:000001E315E35080]   904302 ms: Scavenge 1721.2 (1723.4) -> 1721.2 (1730.4) MB, 187.1 / 0.0 ms  (average mu = 0.999, current mu = 1.000) allocation failure
+
+
+<--- JS stacktrace --->
+Cannot get stack trace in GC.
+FATAL ERROR: MarkCompactCollector: semi-space copy, fallback in old gen Allocation failed - JavaScript heap out of memory
+ 1: 00007FF799A15EBF napi_wrap+114095
+ 2: 00007FF7999C0B46 v8::base::CPU::has_sse+66998
+ 3: 00007FF7999C1946 v8::base::CPU::has_sse+70582
+ 4: 00007FF79A1D6E4E v8::Isolate::ReportExternalAllocationLimitReached+94
+ 5: 00007FF79A1BEF21 v8::SharedArrayBuffer::Externalize+833
+ 6: 00007FF79A08B18C v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436
+ 7: 00007FF79A075133 v8::internal::compiler::BitsetType::BoundariesSize+47331
+ 8: 00007FF79A05E27F v8::internal::ConcurrentBitmap<1>::IsClean+34687
+ 9: 00007FF79A07158E v8::internal::compiler::BitsetType::BoundariesSize+32062
+10: 00007FF79A068251 v8::internal::MarkCompactCollector::EnsureSweepingCompleted+6289
+11: 00007FF79A070382 v8::internal::compiler::BitsetType::BoundariesSize+27442
+12: 00007FF79A07233E v8::internal::compiler::BitsetType::BoundariesSize+35566
+13: 00007FF79A076B42 v8::internal::ItemParallelJob::Task::RunInternal+18
+14: 00007FF79A076ACA v8::internal::ItemParallelJob::Run+666
+15: 00007FF79A057708 v8::internal::ConcurrentBitmap<1>::IsClean+7176
+16: 00007FF79A0686D8 v8::internal::MarkCompactCollector::EnsureSweepingCompleted+7448
+17: 00007FF79A066F34 v8::internal::MarkCompactCollector::EnsureSweepingCompleted+1396
+18: 00007FF79A0653AB v8::internal::ConcurrentBitmap<1>::IsClean+63659
+19: 00007FF79A09094D v8::internal::Heap::LeftTrimFixedArray+845
+20: 00007FF79A092684 v8::internal::Heap::PageFlagsAreConsistent+1060
+21: 00007FF79A0886E3 v8::internal::Heap::CollectGarbage+1283
+22: 00007FF79A086D54 v8::internal::Heap::AddRetainedMap+2452
+23: 00007FF79A0A809D v8::internal::Factory::NewFillerObject+61
+24: 00007FF799E0E1E1 v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1665
+25: 00007FF79A62B3BD v8::internal::SetupIsolateDelegate::SetupHeap+546637
+26: 00007FF79A62C4B3 v8::internal::SetupIsolateDelegate::SetupHeap+550979
+27: 000003566748521B
+
+C:\Users\ament\Documents\_2__Informatica\_3__ALL LANGUAGES - Utilities\ALL-LANGUAGES-Utilities\Javascript\Permutazioni - disposizioni - combinazioni\App mia>
